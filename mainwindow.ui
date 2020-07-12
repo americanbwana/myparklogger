@@ -13,9 +13,320 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="text">
+       <string>Activator</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_3">
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="text">
+       <string>Current park (Activator only)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="currentPark"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QComboBox" name="comboBox">
+        <item>
+         <property name="text">
+          <string>160m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>80m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>60m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>40m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>30m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>20m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>17m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>15m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>12m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>10m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>6m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>70cm</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="huntedPark">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="call">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="sent">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="rcvd">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="text">
+       <string>Log File</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableView" name="logTableView"/>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="text">
+       <string>Current Activation Spots</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableView" name="spotTableView">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="tabKeyNavigation">
+       <bool>false</bool>
+      </property>
+      <property name="showDropIndicator" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="dragDropOverwriteMode">
+       <bool>false</bool>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_Database"/>
+    <addaction name="actionOpen_Database"/>
+    <addaction name="actionBackup_Database"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave_all"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionExport_as_ADI"/>
+    <addaction name="actionView_as_ADI"/>
+    <addaction name="actionWorked_parks"/>
+    <addaction name="actionBulk_log_entry"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAbout_this"/>
+   </widget>
+   <widget class="QMenu" name="menuhelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionOnline_Help"/>
+    <addaction name="actionYou_are_on_your_own"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuAbout"/>
+   <addaction name="menuhelp"/>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew_Database">
+   <property name="text">
+    <string>New Database</string>
+   </property>
+  </action>
+  <action name="actionOpen_Database">
+   <property name="text">
+    <string>Open Database</string>
+   </property>
+  </action>
+  <action name="actionBackup_Database">
+   <property name="text">
+    <string>Backup Database</string>
+   </property>
+  </action>
+  <action name="actionSave_all">
+   <property name="text">
+    <string>Save all</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionExport_as_ADI">
+   <property name="text">
+    <string>Export as ADI</string>
+   </property>
+  </action>
+  <action name="actionView_as_ADI">
+   <property name="text">
+    <string>View as ADI</string>
+   </property>
+  </action>
+  <action name="actionAbout_this">
+   <property name="text">
+    <string>About this</string>
+   </property>
+  </action>
+  <action name="actionOnline_Help">
+   <property name="text">
+    <string>Online Help</string>
+   </property>
+  </action>
+  <action name="actionYou_are_on_your_own">
+   <property name="text">
+    <string>You are on your own</string>
+   </property>
+  </action>
+  <action name="actionWorked_parks">
+   <property name="text">
+    <string>Worked parks</string>
+   </property>
+  </action>
+  <action name="actionBulk_log_entry">
+   <property name="text">
+    <string>Bulk log entry</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
